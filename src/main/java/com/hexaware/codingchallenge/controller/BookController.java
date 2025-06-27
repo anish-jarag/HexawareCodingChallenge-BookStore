@@ -59,7 +59,6 @@ public class BookController {
 	@PutMapping("/{isbn}")
 	public ResponseEntity<?> updateBook(@PathVariable String isbn, @RequestBody Book updatedBook) {
 	    Book updated = bookService.updateBook(isbn, updatedBook);
-
 	    if (updated != null) {
 	        return ResponseEntity.ok("Book updated successfully.");
 	    } else {
